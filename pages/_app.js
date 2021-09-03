@@ -1,5 +1,5 @@
-import AppHead from 'components/AppHead'
-import '../styles/globals.css'
+import AppHead from 'components/AppHead';
+import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
   return (
@@ -10,4 +10,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App
+export default App;

@@ -7,5 +7,5 @@ export default function AppHead() {
       <meta name="description" content="Technical blog on the Cardano blockchain and ecosystem." />
       {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
-  )
+  );
 }
