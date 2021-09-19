@@ -1,7 +1,16 @@
+.node-wrapper {
+  position: relative;
+  white-space: nowrap;
+}
+
 .cardano-node {
-  background-color: white;
+  background-color: #c8f2ff;
   border-radius: 18%;
   border: 2px solid blue;
   height: 60px;
   width:  80px;
+}
+
+.string-input {
+  position: absolute;
 }
