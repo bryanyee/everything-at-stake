@@ -4,8 +4,8 @@ import DefaultHeader from 'components/DefaultHeader';
 
 import styles from 'styles/Layout.module.scss'
 
-const Layout = ({ date, children, header, title }) => (
-  <div>
+const Layout = ({ className, date, children, header, title }) => (
+  <div className={className}>
     <div className={`container ${styles.layout}`}>
       {header}
       {title && <h1 className="mb-1">{title}</h1>}
@@ -16,6 +16,7 @@ const Layout = ({ date, children, header, title }) => (
 );
 
 Layout.defaultProps = {
+  className: '',
   children: null,
   date: null,
   header: <DefaultHeader />,
@@ -23,6 +24,7 @@ Layout.defaultProps = {
 };
 
 Layout.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   date: PropTypes.string,
   header: PropTypes.node,

@@ -3,7 +3,10 @@ import Layout from 'components/Layout';
 
 import { PAGES } from 'config/pages';
 
-export default function Home() {
+const pages = [...PAGES];
+pages.reverse();
+
+export default function Index() {
   return (
     <Layout
       header={<h1>Everything At Stake</h1>}
@@ -12,7 +15,7 @@ export default function Home() {
         <span>A software engineering blog about the Cardano blockchain and ecosystem.</span>
       </p>
       <div className="mt-5">
-        {PAGES.map(({ date, enabled, id, title, }) => {
+        {pages.map(({ date, enabled, id, title, }) => {
           if (!enabled) return null;
           return <IndexLink className="mb-5" date={date} id={id} key={id} title={title} />;
         })}
