@@ -1,9 +1,13 @@
-import styles from '../styles/Home.module.css';
+import Layout from 'components/Layout';
+
+import { findPage } from 'config/pages';
+
+const page = findPage('how-to-participate-in-the-lobster-challenge');
 
 export default function HowToParticipateInTheLobsterChallenge() {
   return (
-    <div className={styles.container}>
-      <div>Hello first blog</div>
-    </div>
+    <Layout date={page.date} title={page.title}>
+      <p>Hello first blog</p>
+    </Layout>
   );
 }

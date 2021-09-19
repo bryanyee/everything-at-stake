@@ -1,12 +1,11 @@
-import AppHead from 'components/AppHead';
-import Navbar from 'components/Navbar';
-import '../styles/globals.css';
+import DocumentHead from 'components/DocumentHead';
+
+import 'styles/globals.scss';
 
 function App({ Component, pageProps }) {
   return (
     <div>
-      <AppHead />
-      <Navbar />
+      <DocumentHead />
       <Component {...pageProps} />
     </div>
   );

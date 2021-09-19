@@ -1,19 +1,22 @@
 import IndexLink from 'components/IndexLink'
-import styles from '../styles/Home.module.css';
+import Layout from 'components/Layout';
+
+import { PAGES } from 'config/pages';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <ul>
-        <IndexLink
-          href="/how-to-participate-in-the-lobster-challenge"
-          title="How to participate in the lobster challenge"
-        />
-        <IndexLink
-          href="/understanding-proof-of-work"
-          title="Understanding proof of work"
-        />
-      </ul>
-    </div>
+    <Layout
+      header={<h1>Everything At Stake</h1>}
+    >
+      <p>
+        <span>A software engineering blog about the Cardano blockchain and ecosystem.</span>
+      </p>
+      <div className="mt-5">
+        {PAGES.map(({ date, enabled, id, title, }) => {
+          if (!enabled) return null;
+          return <IndexLink className="mb-5" date={date} id={id} key={id} title={title} />;
+        })}
+      </div>
+    </Layout>
   );
 }

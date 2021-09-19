@@ -1,17 +1,24 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types';
 
-export default function IndexLink({ href, title }) {
+export default function IndexLink({ className, date, id, title }) {
   return (
-    <li>
-      <Link href={href}>
-        <a>{title}</a>
+    <div className={className}>
+      <Link href={`/${id}`}>
+        <a><h3 className="mb-1">{title}</h3></a>
       </Link>
-    </li>
+      <small>{date}</small>
+    </div>
   );
 }
 
+IndexLink.defaultProps = {
+  className: '',
+};
+
 IndexLink.propTypes = {
-  href: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  date: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };

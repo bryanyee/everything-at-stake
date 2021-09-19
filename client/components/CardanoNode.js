@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import faker from 'faker';
 import shajs from 'sha.js';
-import styles from '../styles/CardanoNode.module.css';
+
+import styles from 'styles/CardanoNode.module.scss';
 
 function getRandomString() {
   return faker.lorem.words();
