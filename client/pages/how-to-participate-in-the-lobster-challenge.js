@@ -86,7 +86,7 @@ f23b74be2d190b6b5e2e56a5d8157d497ed5e38cef7fa380a025e516e99b9bb5     0        81
         `}
       </pre>
       <p>There are two UTxOs present at this address. Later on, we‘ll use the UTxO with the larger <strong>amount</strong> as a part of the transaction to cover the fee.</p>
-      <p>When supplying the transaction as an argument to the script, the value will be a combination of the transaciton hash and index: <strong>TxHash + '#' + TxIx</strong>.</p>
+      <p>When supplying the transaction as an argument to the script, the value will be a combination of the transaciton hash and index: <strong>TxHash + &apos;#&apos; + TxIx</strong>.</p>
       <p>Value for the <strong><em>my_utxo</em></strong> arg in the script, in this example: <strong className="text-break">f23b74be2d190b6b5e2e56a5d8157d497ed5e38cef7fa380a025e516e99b9bb5#0</strong>
       </p>
       <h5 id="step-3" className="mt-4">Check the current state of the vote.</h5>
@@ -120,8 +120,8 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <p>Given the above information, make sure you‘re working in the lobster-challenge directory, and run the <strong>lobster-contribute.sh</strong> script, which builds, signs, and submits the transaction to the <strong><em>Cardano network (woah!)</em></strong>.</p>
       <p>Arguments:</p>
       <ul>
-        <li><code>my_utxo</code> - The <strong>TxHash + '#' + TxId</strong> of your UTxO, to be consumed in the transaction to cover fees.</li>
-        <li><code>lobster_script_utxo</code> - The <strong>TxHash + '#' + TxId</strong> of the script UTxO containing vote data.</li>
+        <li><code>my_utxo</code> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of your UTxO, to be consumed in the transaction to cover fees.</li>
+        <li><code>lobster_script_utxo</code> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of the script UTxO containing vote data.</li>
         <li><code>my_payment_address_path</code> - The path to the file containing your payment address.</li>
         <li><code>my_payment_signing_key_path</code> - The path to the file containing your payment signing key.</li>
         <li><code>old_lobster_count</code></li>

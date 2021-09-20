@@ -1,3 +1,3 @@
 ## Serverless
 
-This directory will contain API endpoints for to support data persistence, such as comments.
+This directory will contain API endpoints to support data persistence, such as comments.
