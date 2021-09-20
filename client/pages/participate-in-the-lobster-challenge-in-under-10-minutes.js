@@ -15,7 +15,7 @@ export default function HowToParticipateInTheLobsterChallenge() {
       </HighlightBox>
       <p>On September 12, 2021, the Alonzo hard fork of the Cardano blockchain successfully brought smart contract functionality to the mainnet.</p>
       <p>One of the first smart contracts deployed was the Lobster Challenge, a program for the community to vote on naming Charles Hoskinson‘s beloved lobster <Emoji unicode={UNICODE_VALUES.lobster} />.</p>
-      <p>Lars Brünjes, IOHK‘s lead instructor and creator of the smart contract, wrote up a couple resources to participate:</p>
+      <p>Lars Brünjes, IOHK‘s lead instructor and creator of the smart contract, provided a couple thorough resources to participate:</p>
       <ul>
         <li>
         <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=6xEAnMaov3E">
@@ -147,15 +147,21 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <strong><em>During cardano node setup:</em></strong>
       <ul>
         <li>
-          <p><strong>socket not found (during first setup)</strong></p>
+          <p><strong>cardano-cli not found (running cardano-cli for the first time)</strong></p>
+          <p><code>command not found: cardano-cli</code></p>
+          <p>Fix: Use the <strong>$HOME</strong> env variable instead of <strong>~</strong> when adding <strong>.local/bin/</strong> to the path in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
+          <pre>export PATH="$HOME/.local/bin/:$PATH"</pre>
+        </li>
+        <li>
+          <p><strong>socket not found (running `cardano-node run` for the first time)</strong></p>
           <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
-          <p>Fix: Create a <code>db</code> folder and <code>node.socket</code> file (following the file convenstions in the <a href="https://developers.cardano.org/docs/get-started/running-cardano/" target="_blank" rel="noopener noreferrer">docs</a>).</p>
+          <p>Fix: Create a <strong>db</strong> folder and <strong>node.socket</strong> file (following the file convenstions in the <a href="https://developers.cardano.org/docs/get-started/running-cardano/" target="_blank" rel="noopener noreferrer">docs</a>).</p>
           <pre>
             {`# In the directory you intend to run the cardano node from.
 mkdir db
 touch db/node.socket`}
           </pre>
-          <p>When you run <code>cardano-node run</code>, ensure that the values for <strong>database-path</strong> and <strong>socket-path</strong> are correct.</p>
+          <p>When you run <strong>`cardano-node run`</strong>, ensure that the values for <strong>database-path</strong> and <strong>socket-path</strong> are correct.</p>
         </li>
       </ul>
       <strong><em>While running scripts in the lobster-challenge repo:</em></strong>
@@ -163,10 +169,10 @@ touch db/node.socket`}
         <li>
           <p><strong>cardano-cli not found</strong></p>
           <p><code>./cardano-cli: No such file or directory</code></p>
-          <p>Fix: In all the <strong>.sh</strong> scripts, change <code>./cardano-cli</code> to <code>cardano-cli</code>.</p>
+          <p>Fix: In all the <strong>.sh</strong> scripts, change <strong>./cardano-cli</strong> to <strong>cardano-cli</strong>, since this command should already be available in your <strong>$PATH</strong>.</p>
         </li>
         <li>
-          <p><strong>socket not found (while running lobster scripts)</strong></p>
+          <p><strong>socket not found</strong></p>
           <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
           <p>Fix: In all the <strong>.sh</strong> scripts, comment out setting the node socket path env variable, since this should already be set in <strong>.bashrc</strong> or <strong>.zshrc</strong></p>
           <p><code># export CARDANO_NODE_SOCKET_PATH=node.socket</code></p>

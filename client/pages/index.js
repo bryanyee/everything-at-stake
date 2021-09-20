@@ -15,9 +15,18 @@ export default function Index() {
         <span>A software engineering blog about the Cardano blockchain and ecosystem.</span>
       </p>
       <div className="mt-5">
-        {pages.map(({ date, enabled, id, title, }) => {
+        {pages.map(({ date, enabled, id, tags, title }) => {
           if (!enabled) return null;
-          return <IndexLink className="mb-5" date={date} id={id} key={id} title={title} />;
+          return (
+            <IndexLink
+              className="mb-5"
+              date={date}
+              id={id}
+              key={id}
+              tags={tags}
+              title={title}
+            />
+          );
         })}
       </div>
     </Layout>

@@ -6,11 +6,11 @@ const PAGES = [
     enabled: true,
     id: 'participate-in-the-lobster-challenge-in-under-10-minutes',
     title: 'Participate in the lobster challenge in under 10 minutes',
-    tags: [TAGS.developerHowTos],
+    tags: [TAGS.developerHowTo],
   },
   {
     date: 'Coming Soon',
-    enabled: true,
+    enabled: false,
     id: 'understanding-proof-of-work',
     title: "(Preview) Understanding proof of work",
     tags: [TAGS.consensusProtocols, TAGS.visualizations]
