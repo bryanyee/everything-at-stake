@@ -5,7 +5,7 @@ import HighlightBox from 'components/HighlightBox';
 import { UNICODE_VALUES } from 'config/constants';
 import { findPage } from 'config/pages';
 
-const page = findPage('how-to-participate-in-the-lobster-challenge');
+const page = findPage('participate-in-the-lobster-challenge-in-under-10-minutes');
 
 export default function HowToParticipateInTheLobsterChallenge() {
   return (
@@ -174,7 +174,7 @@ touch db/node.socket`}
       </ul>
       <h3 className="mt-5">Never forget, concurrency</h3>
       <p>What happens when two people submit a transaction using the same UTxO from the script address?</p>
-      <p>UTxOs can only be spent once, allowing for only one transaction consuming a particular UTxO to submit.</p>
+      <p>UTxOs can only be spent once, allowing for a single transaction to consume a particular UTxO and submit to the blockchain. A later transaction will need to use the new UTxO at the script address, returned from the output of the first transaction.</p>
       <p>The lobster-challenge project isn‘t yet designed to handle a significant number of voters at scale, and that‘s ok! We‘ve just gotten started in the growing world of Cardano development, and there are quite a few ways that projects are designing their systems to handle concurrency, using batching mechanisms both on-chain and off-chain.</p>
       <p>The following projects have outlined their approaches:</p>
       <ul>

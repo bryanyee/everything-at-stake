@@ -20,6 +20,7 @@ a {
   &:hover,
   &:focus {
     color: $maroon;
+    text-decoration: underline;
   }
 }
 

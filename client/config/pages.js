@@ -2,10 +2,10 @@ import { TAGS } from 'config/constants';
 
 const PAGES = [
   {
-    date: 'September 20, 2021',
+    date: '20 September 2021',
     enabled: true,
-    id: 'how-to-participate-in-the-lobster-challenge',
-    title: 'How to participate in the lobster challenge in under 10 minutes',
+    id: 'participate-in-the-lobster-challenge-in-under-10-minutes',
+    title: 'Participate in the lobster challenge in under 10 minutes',
     tags: [TAGS.developerHowTos],
   },
   {

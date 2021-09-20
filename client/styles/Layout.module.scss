@@ -1,7 +1,13 @@
 @import 'styles/variables';
 
 .layout {
+  // position: relative;
+  // min-height: 100vh;
   max-width: 680px;
   margin-top: 40px;
   margin-bottom: 80px;
+}
+
+.content {
+  padding-bottom: 4rem;
 }
