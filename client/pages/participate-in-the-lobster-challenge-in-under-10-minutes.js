@@ -142,8 +142,20 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <p>
         <Emoji unicode={UNICODE_VALUES.lobster} /> <strong>Lobster profit!</strong>
       </p>
+      <h3 className="mt-5">Never forget, concurrency</h3>
+      <p>What happens when two people submit a transaction using the same UTxO from the script address?</p>
+      <p>UTxOs can only be spent once, allowing for only a single transaction to consume a particular UTxO and submit to the blockchain. A later transaction will need to use the new UTxO at the script address, returned from the output of the first transaction.</p>
+      <p>The lobster-challenge project isn‘t designed to handle a significant number of voters at scale, and that‘s ok! Project development on Cardano has officially just gotten started, and there are quite a few ways that projects are designing their systems to handle concurrency, using batching mechanisms both on-chain and off-chain.</p>
+      <p>The following projects have outlined their approaches:</p>
+      <ul>
+        <li><strong>Meld:</strong> <a href="https://medium.com/meld-labs/concurrent-deterministic-batching-on-the-utxo-ledger-99040f809706" target="_blank" rel="noopener noreferrer">Concurrent & Deterministic Batching on the UTXO Ledger</a></li>
+        <li><strong>Minswap:</strong> <a href="https://medium.com/minswap/introducing-laminar-an-eutxo-scaling-protocol-for-accounting-style-smart-contract-d1ac8847dde8" target="_blank" rel="noopener noreferrer">Introducing Laminar — An eUTxO scaling protocol for accounting-style smart contract</a></li>
+        <li><strong>ErgoDex:</strong> <a href="https://github.com/ergolabs/ergo-dex#off-chain-execution" target="_blank" rel="noopener noreferrer">ErgoDex - Off-chain execution</a></li>
+        <li><strong>ErgoDex:</strong> <a href="https://www.youtube.com/watch?v=xlDlNmIFrFM" target="_blank" rel="noopener noreferrer">What is ERGO + ERGOdex Concurrency Solution For Cardano</a></li>
+      </ul>
+      <p>Projects such as SundaeSwap, Occam.fi, and Maladex have also communicated that they have solutions in the works, some of which will be made public at a later time.</p>
       <h3 id="fixes-for-potential-issues" className="mt-5">Fixes for potential issues</h3>
-      <p>Below are several changes made during my own local development (on a Mac), both during cardano node setup and while running the scripts in the lobster-challenge repo.</p>
+      <p>Below are several changes made during my own local setup (on a Mac), both during cardano node setup and while running the scripts in the lobster-challenge repo. Other environments may or may not experience the same issues.</p>
       <strong><em>During cardano node setup:</em></strong>
       <ul>
         <li>
@@ -178,18 +190,6 @@ touch db/node.socket`}
           <p><code># export CARDANO_NODE_SOCKET_PATH=node.socket</code></p>
         </li>
       </ul>
-      <h3 className="mt-5">Never forget, concurrency</h3>
-      <p>What happens when two people submit a transaction using the same UTxO from the script address?</p>
-      <p>UTxOs can only be spent once, allowing for a single transaction to consume a particular UTxO and submit to the blockchain. A later transaction will need to use the new UTxO at the script address, returned from the output of the first transaction.</p>
-      <p>The lobster-challenge project isn‘t yet designed to handle a significant number of voters at scale, and that‘s ok! We‘ve just gotten started in the growing world of Cardano development, and there are quite a few ways that projects are designing their systems to handle concurrency, using batching mechanisms both on-chain and off-chain.</p>
-      <p>The following projects have outlined their approaches:</p>
-      <ul>
-        <li><strong>Meld:</strong> <a href="https://medium.com/meld-labs/concurrent-deterministic-batching-on-the-utxo-ledger-99040f809706" target="_blank" rel="noopener noreferrer">Concurrent & Deterministic Batching on the UTXO Ledger</a></li>
-        <li><strong>Minswap:</strong> <a href="https://medium.com/minswap/introducing-laminar-an-eutxo-scaling-protocol-for-accounting-style-smart-contract-d1ac8847dde8" target="_blank" rel="noopener noreferrer">Introducing Laminar — An eUTxO scaling protocol for accounting-style smart contract</a></li>
-        <li><strong>ErgoDex:</strong> <a href="https://github.com/ergolabs/ergo-dex#off-chain-execution" target="_blank" rel="noopener noreferrer">ErgoDex - Off-chain execution</a></li>
-        <li><strong>ErgoDex:</strong> <a href="https://www.youtube.com/watch?v=xlDlNmIFrFM" target="_blank" rel="noopener noreferrer">What is ERGO + ERGOdex Concurrency Solution For Cardano</a></li>
-      </ul>
-      <p>Projects such as SundaeSwap, Occam.fi, and Maladex have also communicated that they have solutions in the works, some of which will be made public at a later time.</p>
     </Layout>
   );
 }
