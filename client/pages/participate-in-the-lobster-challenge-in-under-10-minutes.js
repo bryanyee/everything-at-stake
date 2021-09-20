@@ -150,7 +150,7 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
           <p><strong>cardano-cli not found (running cardano-cli for the first time)</strong></p>
           <p><code>command not found: cardano-cli</code></p>
           <p>Fix: Use the <strong>$HOME</strong> env variable instead of <strong>~</strong> when adding <strong>.local/bin/</strong> to the path in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
-          <pre>export PATH="$HOME/.local/bin/:$PATH"</pre>
+          <pre>export PATH=&quot;$HOME/.local/bin/:$PATH&quot;</pre>
         </li>
         <li>
           <p><strong>socket not found (running `cardano-node run` for the first time)</strong></p>
