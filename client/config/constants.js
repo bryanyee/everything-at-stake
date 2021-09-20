@@ -4,4 +4,12 @@ const TAGS = Object.freeze({
   visualizations: 'Visualizations',
 });
 
-export { TAGS };
+// https://unicode.org/emoji/charts/full-emoji-list.html
+const UNICODE_VALUES = Object.freeze({
+  lobster: 'U+1F99E', // 🦞
+});
+
+export {
+  TAGS,
+  UNICODE_VALUES,
+};

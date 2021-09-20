@@ -5,7 +5,7 @@ const PAGES = [
     date: 'September 20, 2021',
     enabled: true,
     id: 'how-to-participate-in-the-lobster-challenge',
-    title: 'How to participate in the lobster challenge in under 5 minutes',
+    title: 'How to participate in the lobster challenge in under 10 minutes',
     tags: [TAGS.developerHowTos],
   },
   {
