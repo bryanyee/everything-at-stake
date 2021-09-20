@@ -81,13 +81,13 @@ export default function HowToParticipateInTheLobsterChallenge() {
         {`
                             TxHash                                 TxIx        Amount
 --------------------------------------------------------------------------------------
-2194d29c412472aa156ebac01513a4583442c26cb9dac83e4a01bf5c782f88a8     0        1000000 lovelace + TxOutDatumHashNone
-f23b74be2d190b6b5e2e56a5d8157d497ed5e38cef7fa380a025e516e99b9bb5     0        8168049 lovelace + TxOutDatumHashNone
+9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08     0        1000000 lovelace + TxOutDatumHashNone
+9bba5c53a0545e0c80184b946153c9f58387e3bd1d4ee35740f29ac2e718b019     0        8168049 lovelace + TxOutDatumHashNone
         `}
       </pre>
       <p>There are two UTxOs present at this address. Later on, we‘ll use the UTxO with the larger <strong>amount</strong> as a part of the transaction to cover the fee.</p>
       <p>When supplying the transaction as an argument to the script, the value will be a combination of the transaciton hash and index: <strong>TxHash + &apos;#&apos; + TxIx</strong>.</p>
-      <p>Value for the <strong><em>my_utxo</em></strong> arg in the script, in this example: <strong className="text-break">f23b74be2d190b6b5e2e56a5d8157d497ed5e38cef7fa380a025e516e99b9bb5#0</strong>
+      <p>Value for the <strong><em>my_utxo</em></strong> arg in the script, in this example: <strong className="text-break">9bba5c53a0545e0c80184b946153c9f58387e3bd1d4ee35740f29ac2e718b019#0</strong>
       </p>
       <h5 id="step-3" className="mt-4">Check the current state of the vote.</h5>
       <p>Check the current lobster count and vote count, using the script address <a href="https://github.com/input-output-hk/lobster-challenge#script" target="_blank" rel="noopener noreferrer">documented in the repo</a>.</p>
@@ -135,7 +135,7 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
 ./scripts/lobster-contribute.sh <my_utxo> <lobster_script_utxo> <my_payment_address_path> <my_payment_signing_key_path> <old_lobster_count> <new_lobster_count> <old_vote_count>
 
 # Example (all of these will be different values for you):
-./scripts/lobster-contribute.sh f23b74be2d190b6b5e2e56a5d8157d497ed5e38cef7fa380a025e516e99b9bb5#0 d227fc044c2c4f9f89c3c0c75069e12e50ad4e1642734311af0faf0fc3957d4f#1 /projects/cardano/local-data/payment.addr /projects/cardano/local-data/payment.skey 13715 13730 326
+./scripts/lobster-contribute.sh 9bba5c53a0545e0c80184b946153c9f58387e3bd1d4ee35740f29ac2e718b019#0 d227fc044c2c4f9f89c3c0c75069e12e50ad4e1642734311af0faf0fc3957d4f#1 /projects/cardano/local-data/payment.addr /projects/cardano/local-data/payment.skey 13715 13730 326
 `}
       </pre>
       <p>If the transaction is submitted correctly, wait ~30sec for it to be included in a validated block, and re-query the script address to see the new UTxO.</p>
