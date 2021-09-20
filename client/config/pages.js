@@ -9,7 +9,7 @@ const PAGES = [
     tags: [TAGS.developerHowTos],
   },
   {
-    date: 'TBD',
+    date: 'Coming Soon',
     enabled: true,
     id: 'understanding-proof-of-work',
     title: "(Preview) Understanding proof of work",

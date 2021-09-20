@@ -147,9 +147,9 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <strong><em>During cardano node setup:</em></strong>
       <ul>
         <li>
-          <p><strong>Socket not found (during first setup)</strong></p>
+          <p><strong>socket not found (during first setup)</strong></p>
           <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
-          <p>Create a <code>db</code> folder and <code>node.socket</code> file (following the file convenstions in the <a href="https://developers.cardano.org/docs/get-started/running-cardano/" target="_blank" rel="noopener noreferrer">docs</a>).</p>
+          <p>Fix: Create a <code>db</code> folder and <code>node.socket</code> file (following the file convenstions in the <a href="https://developers.cardano.org/docs/get-started/running-cardano/" target="_blank" rel="noopener noreferrer">docs</a>).</p>
           <pre>
             {`# In the directory you intend to run the cardano node from.
 mkdir db
@@ -158,11 +158,20 @@ touch db/node.socket`}
           <p>When you run <code>cardano-node run</code>, ensure that the values for <strong>database-path</strong> and <strong>socket-path</strong> are correct.</p>
         </li>
       </ul>
-{/*      <strong><em>While running scripts in the lobster-challenge repo:</em></strong>
+      <strong><em>While running scripts in the lobster-challenge repo:</em></strong>
       <ul>
         <li>
+          <p><strong>cardano-cli not found</strong></p>
+          <p><code>./cardano-cli: No such file or directory</code></p>
+          <p>Fix: In all the <strong>.sh</strong> scripts, change <code>./cardano-cli</code> to <code>cardano-cli</code>.</p>
         </li>
-      </ul>*/}
+        <li>
+          <p><strong>socket not found (while running lobster scripts)</strong></p>
+          <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
+          <p>Fix: In all the <strong>.sh</strong> scripts, comment out setting the node socket path env variable, since this should already be set in <strong>.bashrc</strong> or <strong>.zshrc</strong></p>
+          <p><code># export CARDANO_NODE_SOCKET_PATH=node.socket</code></p>
+        </li>
+      </ul>
     </Layout>
   );
 }

@@ -1,3 +1,4 @@
+// memo breaks deployment on Vercel; component name doesn't exist
 // import { memo } from 'react';
 import PropTypes from 'prop-types';
 
