@@ -1,4 +1,4 @@
-import IndexLink from 'components/IndexLink'
+import IndexLink from 'components/IndexLink';
 import Layout from 'components/Layout';
 
 import { PAGES } from 'config/pages';

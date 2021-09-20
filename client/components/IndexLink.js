@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 export default function IndexLink({ className, date, id, title }) {

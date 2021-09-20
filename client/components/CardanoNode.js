@@ -24,7 +24,7 @@ export default function CardanoNode() {
 
     return () => {
       clearInterval(intervalRef.current);
-    }
+    };
   }, []);
 
   return (
