@@ -69,7 +69,7 @@ export default function HowToParticipateInTheLobsterChallenge() {
         </a>.
       </p>
       <h5 id="step-2" className="mt-4">Ensure your payment address has some Ada to cover the transaction fee.</h5>
-      <p>Check that your local payment address contains a UTxO that has some Ada to cover the transaction fee. If needed, send some Ada from another wallet to your local payment address.</p>
+      <p>Check that your local payment address (created as a part of the prerequisites) contains a UTxO that has some Ada to cover the transaction fee. If needed, send some Ada from another wallet to your local payment address.</p>
       <pre>
         {`cardano-cli query utxo \\
   --address <payment_address> \\
@@ -86,7 +86,7 @@ export default function HowToParticipateInTheLobsterChallenge() {
         `}
       </pre>
       <p>There are two UTxOs present at this address. Later on, we‘ll use the UTxO with the larger <strong>amount</strong> as a part of the transaction to cover the fee.</p>
-      <p>When supplying the transaction as an argument to the script, the value will be a combination of the transaciton hash and index: <strong>TxHash + &apos;#&apos; + TxIx</strong>.</p>
+      <p>When supplying the transaction as an argument to the script, the value will be a combination of the transaction hash and index: <strong>TxHash + &apos;#&apos; + TxIx</strong>.</p>
       <p>Value for the <strong><em>my_utxo</em></strong> arg in the script, in this example: <strong className="text-break">9bba5c53a0545e0c80184b946153c9f58387e3bd1d4ee35740f29ac2e718b019#0</strong>
       </p>
       <h5 id="step-3" className="mt-4">Check the current state of the vote.</h5>
@@ -181,12 +181,12 @@ touch db/node.socket`}
         <li>
           <p><strong>cardano-cli not found</strong></p>
           <p><code>./cardano-cli: No such file or directory</code></p>
-          <p>Fix: In all the <strong>.sh</strong> scripts, change <strong>./cardano-cli</strong> to <strong>cardano-cli</strong>, since this command should already be available in your <strong>$PATH</strong>.</p>
+          <p>Fix: In all the <strong>.sh</strong> scripts, change <strong>./cardano-cli</strong> to <strong>cardano-cli</strong>, since this command should already be available in your <strong>$PATH</strong>, set in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
         </li>
         <li>
           <p><strong>socket not found</strong></p>
           <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
-          <p>Fix: In all the <strong>.sh</strong> scripts, comment out setting the node socket path env variable, since this should already be set in <strong>.bashrc</strong> or <strong>.zshrc</strong></p>
+          <p>Fix: In all the <strong>.sh</strong> scripts, comment out setting the node socket path env variable, since this should already be set in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
           <p><code># export CARDANO_NODE_SOCKET_PATH=node.socket</code></p>
         </li>
       </ul>
