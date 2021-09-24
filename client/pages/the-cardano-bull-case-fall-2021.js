@@ -11,14 +11,15 @@ export default function TheCardanoBullCaseFall2021() {
   return (
     <Layout date={page.date} title={page.title}>
       <HighlightBox className="mb-3">
-        <strong>Note:</strong> The speculation, news and price-focused content of this article will <strong><em>not</em></strong> be representative of this blog moving forward. I had written this up to share in a more private medium - hence the casual bullet notes format - but figured this would be interesting to share out. Future blog posts will focus on covering the technical aspects of Cardano and its architecture, using animated visualizations.
+        <strong>Note:</strong> The speculation, news and price-focused content of this article will <strong><em>not</em></strong> be representative of this blog moving forward. I had originally written this up to share in a more private medium - hence the casual bullet notes format - but figured this would be interesting to share out. Future blog posts will focus on covering the technical aspects of Cardano and its architecture, using animated visualizations.
       </HighlightBox>
       <p>Cardano Summit <Emoji unicode={UNICODE_VALUES.mountain} /> is just around the corner on September 25 & 26. It‘s expected to bring about astounding news on the Cardano ecosystem, including news about project and application developments, government and corporate partnerships, advancements for the platform, and plans for future growth of the technology and its impact on society.</p>
       <p>I wrote up notes to help clarify my own personal thoughts, and to make a bull case for the Cardano project and Ada token.</p>
       <p>Of course when thinking about price, there‘s other factors to consider, such as overall market conditions and the impact of Bitcoin‘s performance on all cryptocurrencies. There‘s also project development within Cardano that will likely contribute to natural growth or stability over the next few months, including launches of decentralized exchanges, lending platforms, oracles, and other applications.</p>
       <p>However, what I‘m focusing on here are <strong><em>significant, head-turning announcements</em></strong> coming out of Cardano Summit. Dopamine-triggering news that make it nice to think about lofty futures.</p>
       <p>The things that will get the attention of people like Mark Cuban and Ark Invest‘s Cathie Wood, and bring Cardano to the main stage in the eyes of institutions and retail investors.</p>
-      <p>Sydney Vollmer, the Head of Brands & Comms at the Cardano Foundation, tweeted that the partnerships to be announced at Cardano Summit will <strong><a href="https://twitter.com/SidneyVollmer/status/1437855888237338627?" target="_blank" rel="noopener noreferrer">blow people‘s minds</a></strong>. Below are the major news and developments coming soon, including massive speculation.</p>
+      <p>Sydney Vollmer, the Head of Brands & Comms at the Cardano Foundation, tweeted that the partnerships to be announced at Cardano Summit will <strong><a href="https://twitter.com/SidneyVollmer/status/1437855888237338627?" target="_blank" rel="noopener noreferrer">blow people‘s minds</a></strong>.</p>
+      <p>I‘d imagine there may only be a handful of truly extraordinary announcements. Other sessions will cover exciting projects that the Cardano community have already long known about. However, their collective focus this weekend may hopefully be news-worthy, even for those who don‘t normally follow the ecosystem. Below are the major news and developments coming soon, including massive speculation.</p>
       <p>I‘ve given them my own ratings on how impactful each item is:</p>
       <ul>
         <li><strong>(H) High impact</strong>: These are big ticket, news-worthy items that would catch eyes outside of the Cardano community, and perhaps spread into parts of the larger investing community.</li>
@@ -31,7 +32,7 @@ export default function TheCardanoBullCaseFall2021() {
         <li><strong><em>Government partnerships</em></strong></li>
           <ul>
             <li>(H) (rumor) Partnership with the European Union</li>
-            <li>(H) Another partnership(s) with a country or organizations in Africa</li>
+            <li>(H) Partnership(s) with a country or organizations in Africa, in addition to Ethiopia</li>
             <ul>
               <li><em>Keynote: Decentralization for advancement in Africa</em></li>
               <li><em>Building brighter futures in Rwanda with Blockchain</em></li>
@@ -82,7 +83,7 @@ export default function TheCardanoBullCaseFall2021() {
       </ul>
       <p className="mt-3">Of course, Ada is already the 3rd largest market-cap cryptocurrency, so Cardano shouldn‘t be expected to go completely parabolic. There may be greater potential for price appreciation in projects launching on Cardano over the next several months, following the recent launch of smart contracts. However, the information above are all data points that would make me confident in the performance of Ada over other large cap cryptocurrencies.</p>
       <h3 className="mt-5">What‘s next</h3>
-      <p>Make sure to <a href="https://summit.cardano.org/" target="blank" rel="noopener noreferrer">sign up to attend</a> Cardano Summit, and enjoy exploring the accompanying virtual worlds. And check out the <a href="https://summit.cardano.org/agenda" target="_blank" rel="noopener noreferrer">exhaustive list of sessions</a>.</p>
+      <p>Make sure to <a href="https://summit.cardano.org/" target="blank" rel="noopener noreferrer">sign up to attend</a> Cardano Summit, and enjoy exploring the accompanying virtual worlds! And check out the <a href="https://summit.cardano.org/agenda" target="_blank" rel="noopener noreferrer">exhaustive list of sessions</a>.</p>
     </Layout>
   );
 }
