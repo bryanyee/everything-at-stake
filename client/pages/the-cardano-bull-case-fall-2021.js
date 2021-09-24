@@ -67,7 +67,7 @@ export default function TheCardanoBullCaseFall2021() {
         <li>Redefining DApp discovery: Bringing DApps to the mass market</li>
         <li>Building the sociotechnical operating system of the world</li>
         <li>From grape to glass: how to track and trace wine shipped across continents</li>
-        <li>Exploring models for creating a Cardano 'nation'</li>
+        <li>Exploring models for creating a Cardano &apos;nation&apos;</li>
         <li>Light wallets: the path to accessibility for all</li>
         <li>NFTs and Cardano</li>
         <li>Smart contracts: the Plutus developer experience</li>
@@ -81,7 +81,7 @@ export default function TheCardanoBullCaseFall2021() {
         <li>Research and university collaboration</li>
       </ul>
       <p className="mt-3">Of course, Ada is already the 3rd largest market-cap cryptocurrency, so Cardano shouldn‘t be expected to go completely parabolic. There may be greater potential for price appreciation in projects launching on Cardano over the next several months, following the recent launch of smart contracts. However, the information above are all data points that would make me confident in the performance of Ada over other large cap cryptocurrencies.</p>
-      <h3 className="mt-5">What's next</h3>
+      <h3 className="mt-5">What‘s next</h3>
       <p>Make sure to <a href="https://summit.cardano.org/" target="blank" rel="noopener noreferrer">sign up to attend</a> Cardano Summit, and enjoy exploring the accompanying virtual worlds. And check out the <a href="https://summit.cardano.org/agenda" target="_blank" rel="noopener noreferrer">exhaustive list of sessions</a>.</p>
     </Layout>
   );
