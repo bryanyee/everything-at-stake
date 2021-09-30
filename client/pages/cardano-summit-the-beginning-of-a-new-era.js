@@ -9,8 +9,8 @@ const page = findPage('cardano-summit-the-beginning-of-a-new-era');
 export default function CardanoSummitTheBeginningOfANewEra() {
   return (
     <Layout date={page.date} title={page.title}>
-      <p>Cardano Summit <Emoji unicode={UNICODE_VALUES.mountain} /> is just around the corner on September 25 & 26.</p>
-      <p>What’s exciting about this next round of news is that it’s not just another update or another new platform. It’s an advancement of the whole decentralized technology space. It answers the question: as a normal human being (outside of crypto), <strong><em>why should I care?</em></strong></p>
+      <p>Cardano Summit <Emoji unicode={UNICODE_VALUES.mountain} /> is just around the corner, on September 25 & 26.</p>
+      <p>What’s truly momentous about this next round of news is that it’s not just another update or another new platform. It’s an advancement of the whole decentralized technology space. It answers the question: as a normal human being (outside of crypto), <strong><em>why should I care?</em></strong></p>
       <p>Bitcoin brought a digitized alternative to gold.</p>
       <p>Ethereum introduced new functionality that primarily remained within the crypto world, and NFTs generated the next source of mainstream attention.</p>
       <p>The developments coming out of Cardano Summit will introduce many more practical applications that may impact the average person.</p>
