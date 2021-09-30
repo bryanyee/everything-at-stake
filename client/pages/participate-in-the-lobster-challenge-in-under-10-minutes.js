@@ -149,11 +149,12 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <p>The following projects have outlined their approaches:</p>
       <ul>
         <li><strong>Meld:</strong> <a href="https://medium.com/meld-labs/concurrent-deterministic-batching-on-the-utxo-ledger-99040f809706" target="_blank" rel="noopener noreferrer">Concurrent & Deterministic Batching on the UTXO Ledger</a></li>
+        <li><strong>Maladex:</strong> <a href="https://blog.maladex.com/maladex-solves-concurrency-scales-beyond-memory-limits-and-designs-the-best-possible-cardano-dex-391d7e519e67" target="_blank" rel="noopener noreferrer">Maladex solves concurrency scales beyond memory limits and designs the best possible Cardano DEX</a></li>
         <li><strong>Minswap:</strong> <a href="https://medium.com/minswap/introducing-laminar-an-eutxo-scaling-protocol-for-accounting-style-smart-contract-d1ac8847dde8" target="_blank" rel="noopener noreferrer">Introducing Laminar — An eUTxO scaling protocol for accounting-style smart contract</a></li>
         <li><strong>ErgoDex:</strong> <a href="https://github.com/ergolabs/ergo-dex#off-chain-execution" target="_blank" rel="noopener noreferrer">ErgoDex - Off-chain execution</a></li>
         <li><strong>ErgoDex:</strong> <a href="https://www.youtube.com/watch?v=xlDlNmIFrFM" target="_blank" rel="noopener noreferrer">What is ERGO + ERGOdex Concurrency Solution For Cardano</a></li>
       </ul>
-      <p>Projects such as SundaeSwap, Occam.fi, and Maladex have also communicated that they have solutions in the works, some of which will be made public at a later time.</p>
+      <p>Projects such as SundaeSwap and Occam.fi have also communicated that they have solutions in the works, some of which will be made public at a later time.</p>
       <h3 id="fixes-for-potential-issues" className="mt-5">Fixes for potential issues</h3>
       <p>Below are several changes made during my own local setup (on a Mac), both during cardano node setup and while running the scripts in the lobster-challenge repo. Other environments may or may not experience the same issues.</p>
       <strong><em>During cardano node setup:</em></strong>
