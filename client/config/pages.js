@@ -3,6 +3,7 @@ import { TAGS } from 'config/constants';
 const PAGES = [
   {
     date: '20 September 2021',
+    description: 'Help name Charles Hoskinson‘s lobster using the cardano-cli',
     enabled: true,
     id: 'participate-in-the-lobster-challenge-in-under-10-minutes',
     title: 'Participate in the lobster challenge in under 10 minutes',
@@ -10,6 +11,7 @@ const PAGES = [
   },
   {
     date: '24 September 2021',
+    description: 'The world‘s first true 3rd generation blockchain is ready for prime time',
     enabled: true,
     id: 'cardano-summit-the-beginning-of-a-new-era',
     title: "Cardano Summit: the beginning of a new era",
@@ -17,6 +19,7 @@ const PAGES = [
   },
   {
     date: 'Coming Soon',
+    description: 'A visual guide for proof of work',
     enabled: false,
     id: 'understanding-proof-of-work',
     title: "(Preview) Understanding proof of work",

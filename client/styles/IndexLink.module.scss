@@ -1,6 +1,35 @@
+@import 'styles/variables';
+
+.index-link-anchor {
+  &:hover,
+  &:focus {
+    text-decoration: none;  
+  }
+}
+
+.index-link-inner {
+  color: black;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(1.04);
+    text-decoration: none;
+  }
+
+  h3 {
+    color: $maroon;
+  }
+}
+
 .tag {
-  border-radius: 12px;
-  background-color: lightblue;
+  border-radius: 8px;
+  background-color: lightgrey;
   margin-right: 8px;
   padding: 2px 12px;
+}
+
+.tag-container {
+  margin: 8px 0px;
 }

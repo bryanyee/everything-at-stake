@@ -1,6 +1,6 @@
 const TAGS = Object.freeze({
   consensusProtocols: 'Consensus Protocols',
-  developerHowTo: 'Developer How To',
+  developerHowTo: 'Developer How-To',
   journal: 'Journal',
   visualizations: 'Visualizations',
 });

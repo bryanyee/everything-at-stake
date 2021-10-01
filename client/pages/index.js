@@ -12,14 +12,15 @@ export default function Index() {
       header={<h1>Everything At Stake</h1>}
     >
       <p>
-        <span>A software engineering blog about the Cardano blockchain and ecosystem.</span>
+        <span>A technical blog about the Cardano blockchain and ecosystem.</span>
       </p>
       <div className="mt-5">
-        {pages.map(({ date, enabled, id, tags, title }) => {
+        {pages.map(({ date, description, enabled, id, tags, title }) => {
           if (!enabled) return null;
           return (
             <IndexLink
               className="mb-5"
+              description={description}
               date={date}
               id={id}
               key={id}
