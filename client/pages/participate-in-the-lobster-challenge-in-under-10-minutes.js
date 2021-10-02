@@ -120,15 +120,15 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <p>Given the above information, make sure you‘re working in the lobster-challenge directory, and run the <strong>lobster-contribute.sh</strong> script, which builds, signs, and submits the transaction to the <strong><em>Cardano network (woah!)</em></strong>.</p>
       <p>Arguments:</p>
       <ul>
-        <li><code>my_utxo</code> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of your UTxO, to be consumed in the transaction to cover fees.</li>
-        <li><code>lobster_script_utxo</code> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of the script UTxO containing vote data.</li>
-        <li><code>my_payment_address_path</code> - The path to the file containing your payment address.</li>
-        <li><code>my_payment_signing_key_path</code> - The path to the file containing your payment signing key.</li>
-        <li><code>old_lobster_count</code></li>
-        <li><code>new_lobster_count</code>
+        <li><strong><em>my_utxo</em></strong> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of your UTxO, to be consumed in the transaction to cover fees.</li>
+        <li><strong><em>lobster_script_utxo</em></strong> - The <strong>TxHash + &apos;#&apos; + TxId</strong> of the script UTxO containing vote data.</li>
+        <li><strong><em>my_payment_address_path</em></strong> - The path to the file containing your payment address.</li>
+        <li><strong><em>my_payment_signing_key_path</em></strong> - The path to the file containing your payment signing key.</li>
+        <li><strong><em>old_lobster_count</em></strong></li>
+        <li><strong><em>new_lobster_count</em></strong>
           {` - `}<strong>{`<old_lobster_count>`}</strong> {`plus a value between 1 and 100`}
         </li>
-        <li><code>old_vote_count</code></li>
+        <li><strong><em>old_vote_count</em></strong></li>
       </ul>
       <p>Run the script:</p>
       <pre>{`# Script signature:
@@ -161,13 +161,13 @@ db250ed5eb4454843af19dea7ca84a8adda170fc88284e7e5e2381b41dab5f9b     1        30
       <ul>
         <li>
           <p><strong>cardano-cli not found (running cardano-cli for the first time)</strong></p>
-          <p><code>command not found: cardano-cli</code></p>
+          <p><pre>command not found: cardano-cli</pre></p>
           <p>Fix: Use the <strong>$HOME</strong> env variable instead of <strong>~</strong> when adding <strong>.local/bin/</strong> to the path in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
           <pre>export PATH=&quot;$HOME/.local/bin/:$PATH&quot;</pre>
         </li>
         <li>
           <p><strong>socket not found (running `cardano-node run` for the first time)</strong></p>
-          <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
+          <p><pre>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</pre></p>
           <p>Fix: Create a <strong>db</strong> folder and <strong>node.socket</strong> file (following the file convenstions in the <a href="https://developers.cardano.org/docs/get-started/running-cardano/" target="_blank" rel="noopener noreferrer">docs</a>).</p>
           <pre>
             {`# In the directory you intend to run the cardano node from.
@@ -181,14 +181,14 @@ touch db/node.socket`}
       <ul>
         <li>
           <p><strong>cardano-cli not found</strong></p>
-          <p><code>./cardano-cli: No such file or directory</code></p>
+          <p><pre>./cardano-cli: No such file or directory</pre></p>
           <p>Fix: In all the <strong>.sh</strong> scripts, change <strong>./cardano-cli</strong> to <strong>cardano-cli</strong>, since this command should already be available in your <strong>$PATH</strong>, set in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
         </li>
         <li>
           <p><strong>socket not found</strong></p>
-          <p><code>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</code></p>
+          <p><pre>{`Network.Socket.connect: <socket: 13>: does not exist (No such file or directory)`}</pre></p>
           <p>Fix: In all the <strong>.sh</strong> scripts, comment out setting the node socket path env variable, since this should already be set in <strong>.bashrc</strong> or <strong>.zshrc</strong>.</p>
-          <p><code># export CARDANO_NODE_SOCKET_PATH=node.socket</code></p>
+          <p><pre># export CARDANO_NODE_SOCKET_PATH=node.socket</pre></p>
         </li>
       </ul>
     </Layout>

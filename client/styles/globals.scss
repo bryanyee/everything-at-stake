@@ -31,6 +31,13 @@ h5 {
   font-family: "Arial Black", Gadget, sans-serif;
 }
 
-pre, code {
+code {
   color: $maroon;
+}
+
+pre {
+  color: $white;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: $black-blue;
 }
