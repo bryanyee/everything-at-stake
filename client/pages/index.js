@@ -31,7 +31,7 @@ export default function Index() {
       <p>
         <span>A technical blog about the Cardano blockchain and ecosystem.</span>
       </p>
-      <div className="mt-5">
+      <div className="mt-4">
         {TAG_KEYS.map((tagKey) => (
           <button
             className={classnames('btn-sm', styles.tag, styles.selectable, {
