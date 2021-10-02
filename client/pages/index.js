@@ -4,6 +4,8 @@ import { useState } from 'react';
 import IndexLink from 'components/IndexLink';
 import Layout from 'components/Layout';
 
+import useTags from 'hooks/useTags';
+
 import { TAGS, TAG_KEYS } from 'config/constants';
 import { PAGES } from 'config/pages';
 
@@ -13,15 +15,11 @@ const pages = [...PAGES];
 pages.reverse();
 
 export default function Index() {
-  const [selectedTag, setTag] = useState(null);
+  const [selectedTag, selectTag] = useTags();
 
   const onTagClick = (e, tagKey) => {
-    if (tagKey !== selectedTag) {
-      setTag(tagKey);  
-    } else {
-      e.target.blur();
-      setTag(null);  
-    }
+    e.target.blur();
+    selectTag(tagKey);
   }
 
   return (
