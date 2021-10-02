@@ -1,0 +1,23 @@
+@import 'styles/variables';
+
+.tag {
+  background-color: $lighter-grey;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 4px 8px;
+}
+
+.selectable {
+  &:hover,
+  &:focus {
+    border-color: $maroon;
+    color: $maroon;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  border-color: $maroon;
+  color: $maroon;
+}

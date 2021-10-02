@@ -5,6 +5,8 @@ const TAGS = Object.freeze({
   visualizations: 'Visualizations',
 });
 
+const TAG_KEYS = Object.keys(TAGS);
+
 // https://unicode.org/emoji/charts/full-emoji-list.html
 const UNICODE_VALUES = Object.freeze({
   lobster: 'U+1F99E', // 🦞
@@ -13,5 +15,6 @@ const UNICODE_VALUES = Object.freeze({
 
 export {
   TAGS,
+  TAG_KEYS,
   UNICODE_VALUES,
 };
