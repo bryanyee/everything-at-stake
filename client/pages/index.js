@@ -34,7 +34,7 @@ export default function Index() {
       <div className="mt-4">
         {TAG_KEYS.map((tagKey) => (
           <button
-            className={classnames('btn-sm', styles.tag, styles.selectable, {
+            className={classnames('btn-sm me-2', styles.tag, styles.selectable, {
               [styles.selected]: tagKey === selectedTag,
             })}
             onClick={(e) => onTagClick(e, tagKey)}
