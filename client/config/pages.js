@@ -15,7 +15,15 @@ const PAGES = [
     enabled: true,
     id: 'cardano-summit-the-beginning-of-a-new-era',
     title: "Cardano Summit: the beginning of a new era",
-    tags: [TAGS.journal]
+    tags: [TAGS.journal],
+  },
+  {
+    date: '30 September 2021',
+    description: 'Take advantage of Daedalus to query the Cardano blockchain.',
+    enabled: true,
+    id: 'how-to-run-cardano-cli-against-daedalus-wallet',
+    title: "How to run cardano-cli against a daedalus wallet",
+    tags: [TAGS.developerHowTo],
   },
   {
     date: 'Coming Soon',
@@ -23,7 +31,7 @@ const PAGES = [
     enabled: false,
     id: 'understanding-proof-of-work',
     title: "(Preview) Understanding proof of work",
-    tags: [TAGS.consensusProtocols, TAGS.visualizations]
+    tags: [TAGS.consensusProtocols, TAGS.visualizations],
   },
 ];
 
