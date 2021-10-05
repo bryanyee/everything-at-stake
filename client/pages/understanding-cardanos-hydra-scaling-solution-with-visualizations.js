@@ -54,7 +54,7 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
           translateX: (_target, i) => -8 + i * txRecWidth * .9,
           translateY: (_target, i) => 8 + (txWrapperIndex * blockHeight * .2),
         });
-    })
+    });
   }
 
   useLayoutEffect(() => {
