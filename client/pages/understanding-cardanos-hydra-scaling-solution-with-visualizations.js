@@ -65,7 +65,7 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
     <Layout date={page.date} title={page.title}>
       <AnimationContainer className="mt-5" ref={containerRef0} style={{ height: containerHeight }}>
       {txWrapperColors.map((color, txWrapperIndex) => (
-        <TxWrapper className="tx-wrapper">
+        <TxWrapper key={`tx-wrapper-${txWrapperIndex}`} className="tx-wrapper">
           {Array(txPerBlock).fill(null).map((_el, txRectangleIndex) => (
             <TxRectangle
               className={`${txRectClass} ${txRectClass}-${txWrapperIndex}`}
