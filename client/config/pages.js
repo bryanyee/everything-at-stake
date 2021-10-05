@@ -18,6 +18,14 @@ const PAGES = [
     tags: [TAGS.journal]
   },
   {
+    date: '4 October 2021',
+    description: 'An animated visual guide to scaling transactions on Hydra head chains.',
+    enabled: true,
+    id: 'understanding-cardanos-hydra-scaling-solution-with-visualizations',
+    title: "Understanding Cardano‘s Hydra scaling solution with visualizations",
+    tags: [TAGS.architecture, TAGS.visualizations],
+  },
+  {
     date: 'Coming Soon',
     description: 'A visual guide to the proof of work consensus mechanism.',
     enabled: false,

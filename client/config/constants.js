@@ -1,4 +1,5 @@
 const TAGS = Object.freeze({
+  architecture: 'Architecture',
   consensusProtocols: 'Consensus Protocols',
   developerHowTo: 'Developer How-To',
   journal: 'Journal',
