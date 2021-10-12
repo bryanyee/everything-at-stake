@@ -1,8 +1,9 @@
 import anime from 'animejs';
-import { useLayoutEffect, createRef } from 'react';
+import { useEffect, createRef, useRef } from 'react';
 
 import AnimationContainer from 'components/AnimationContainer';
 import Layout from 'components/Layout';
+import MountDetector from 'components/MountDetector';
 import TxRectangle from 'components/TxRectangle';
 import TxWrapper from 'components/TxWrapper';
 
@@ -16,8 +17,15 @@ const blockHeight = containerHeight / 5; // px
 const txPerBlock = 10;
 const txRectClass = 'tx-rect';
 
+// Render flow before running animations:
+// 1. Render children after container has mounted
+// useEffect, useState, useRef -> capture container width -> use render props to pass width to children
+
+// 2. Start animation after children render
+
 export default function UnderstandingCardanosHydraScalingSolutionWithVisualizations() {
   const containerRef0 = createRef();
+  const timelineRef = useRef();
 
   const runAnimation = () => {
     const containerWidth = containerRef0.current.offsetWidth;
@@ -32,23 +40,31 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
     })
 
     // Start animation timeline
-    const timeline = anime.timeline({
+    timelineRef.current = anime.timeline({
       complete: () => { runAnimation() },
     });
 
+    // timelineRef.current.add({
+    //   duration: 1,
+    //   targets: `.${txRectClass}`,
+    //   opacity: 100,
+    //   translateX: `${-containerWidth}px`,
+    //   translateY: (_target, i) => `${(containerHeight * 3 / 8) - Math.floor(i / txPerBlock) * blockHeight}px)}`,
+    // });
+
     txWrapperColors.forEach((color, txWrapperIndex) => {
-      timeline
+      timelineRef.current
         // Stagger moving TxRectangles to middle of container
         .add({
-          delay: anime.stagger(200),
-          duration: 2000,
+          delay: (_target, i) => (800 + (i * 160)),
+          duration: 1000,
           easing: 'easeInOutSine',
           targets: `.${txRectClass}-${txWrapperIndex}`,
           translateX: (_target, i) => -((containerWidth * 1 / 4) + (i * txRecWidth * .5)),
         }, txWrapperIndex !== 0 ? '-=1400' : '+=0')
         // Aggregate TxRectangles into a block
         .add({
-          duration: 1000,
+          duration: 600,
           easing: 'easeInOutExpo',
           targets: `.${txRectClass}-${txWrapperIndex}`,
           translateX: (_target, i) => -8 + i * txRecWidth * .9,
@@ -57,28 +73,42 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
     });
   }
 
-  useLayoutEffect(() => {
-    runAnimation();
-  }, []);
+  useEffect(() => () => { timelineRef.current.pause() }, []);
 
   return (
     <Layout date={page.date} title={page.title}>
-      <AnimationContainer className="mt-5" ref={containerRef0} style={{ height: containerHeight }}>
-      {txWrapperColors.map((color, txWrapperIndex) => (
-        <TxWrapper key={`tx-wrapper-${txWrapperIndex}`} className="tx-wrapper">
-          {Array(txPerBlock).fill(null).map((_el, txRectangleIndex) => (
-            <TxRectangle
-              className={`${txRectClass} ${txRectClass}-${txWrapperIndex}`}
-              key={`${txWrapperIndex}-${txRectangleIndex}`}
-              style={{ // Initial Styles Part 1 - Hide and set properties, before render
-                backgroundColor: color,
-                height: `${blockHeight}px`,
-                display: 'none',
-              }}
-            />
-          ))}
-        </TxWrapper>
-      ))}
+      <AnimationContainer
+        className="mt-5"
+        ref={containerRef0}
+        style={{ height: containerHeight }}
+      >
+        {({ containerWidth }) => {
+          const txRecWidth = containerWidth / 30;
+
+          return (
+            <>
+              <MountDetector onMount={runAnimation} />
+              {txWrapperColors.map((color, txWrapperIndex) => (
+                <TxWrapper key={`tx-wrapper-${txWrapperIndex}`} className="tx-wrapper">
+                  {Array(txPerBlock).fill(null).map((_el, txRectangleIndex) => (
+                    <TxRectangle
+                      className={`${txRectClass} ${txRectClass}-${txWrapperIndex}`}
+                      key={`${txWrapperIndex}-${txRectangleIndex}`}
+                      style={{ // Initial Styles Part 1 - Hide and set properties, before render
+                        backgroundColor: color,
+                        height: `${blockHeight}px`,
+                        width: `${txRecWidth}px`,
+                        display: 'none',
+                        // opacity: 0,
+                        // transform: `translateX(${-containerWidth}px)`
+                      }}
+                    />
+                  ))}
+                </TxWrapper>
+              ))}
+            </>
+          );
+        }}
       </AnimationContainer>
     </Layout>
   );
@@ -91,7 +121,7 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
 - What makes up a hydra head pool
 - Hydra is a scaling solution, not a concurrency solution
 - Compare with vertical scaling (Solana) and sharding (Ethereum)
-- Hydra can be applied to other blockchains
+- No token
 - Resources: whitepaper, code
 - Mobile styles
 */
