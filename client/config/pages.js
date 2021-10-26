@@ -18,21 +18,37 @@ const PAGES = [
     tags: [TAGS.journal]
   },
   {
-    date: '4 October 2021',
-    description: 'An animated visual guide to scaling transactions on Hydra head chains.',
+    date: '26 October 2021',
+    description: 'Cardano has zero live applications. Yet, what sets it apart from all other distributed ledger protocols?',
     enabled: true,
-    id: 'understanding-cardanos-hydra-scaling-solution-with-visualizations',
-    title: "Understanding Cardano‘s Hydra scaling solution with visualizations",
-    tags: [TAGS.architecture, TAGS.visualizations],
+    id: 'why-cardano',
+    title: "Why Cardano?",
+    tags: [TAGS.journal],
   },
-  {
-    date: 'Coming Soon',
-    description: 'A visual guide to the proof of work consensus mechanism.',
-    enabled: false,
-    id: 'understanding-proof-of-work',
-    title: "(Preview) Understanding proof of work",
-    tags: [TAGS.consensusProtocols, TAGS.visualizations]
-  },
+  // {
+  //   date: '27 October 2021',
+  //   description: 'Learn how to run basic cardano-cli commands using the daedalus cardano node.',
+  //   enabled: true,
+  //   id: 'interact-with-the-cardano-blockchain-using-the-daedalus-wallet',
+  //   title: "Try out the cardano-cli using daedalus wallet",
+  //   tags: [TAGS.developerHowTo],
+  // },
+  // {
+  //   date: '25 October 2021',
+  //   description: 'An animated visual guide to scaling transactions on Hydra head chains.',
+  //   enabled: true,
+  //   id: 'understanding-cardanos-hydra-scaling-solution-with-visualizations',
+  //   title: "Understanding Cardano‘s Hydra scaling solution with visualizations",
+  //   tags: [TAGS.architecture, TAGS.visualizations],
+  // },
+  // {
+  //   date: 'Coming Soon',
+  //   description: 'A visual guide to the proof of work consensus mechanism.',
+  //   enabled: false,
+  //   id: 'understanding-proof-of-work',
+  //   title: "(Preview) Understanding proof of work",
+  //   tags: [TAGS.consensusProtocols, TAGS.visualizations]
+  // },
 ];
 
 const findPage = id => PAGES.find(page => id === page.id);

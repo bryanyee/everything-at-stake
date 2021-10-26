@@ -34,10 +34,9 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
     // Initial Styles Part 2 - Set pre-animation styles, now that width of the parent container can be calculated
     const txElements = [...document.querySelectorAll(`.${txRectClass}`)];
     txElements.forEach((el, i) => {
-      el.style.display = 'inline-block';
-      el.style.width = `${txRecWidth}px`;
+      el.style.opacity = '100';
       el.style.transform = `translateX(${-containerWidth}px) translateY(${(containerHeight * 3 / 8) - Math.floor(i / txPerBlock) * blockHeight}px)`;
-    })
+    });
 
     // Start animation timeline
     timelineRef.current = anime.timeline({
@@ -45,11 +44,11 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
     });
 
     // timelineRef.current.add({
-    //   duration: 1,
+    //   duration: 0,
     //   targets: `.${txRectClass}`,
     //   opacity: 100,
     //   translateX: `${-containerWidth}px`,
-    //   translateY: (_target, i) => `${(containerHeight * 3 / 8) - Math.floor(i / txPerBlock) * blockHeight}px)}`,
+    //   // translateY: (_target, i) => `${(containerHeight * 3 / 8) - Math.floor(i / txPerBlock) * blockHeight}px)}`,
     // });
 
     txWrapperColors.forEach((color, txWrapperIndex) => {
@@ -98,9 +97,7 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
                         backgroundColor: color,
                         height: `${blockHeight}px`,
                         width: `${txRecWidth}px`,
-                        display: 'none',
-                        // opacity: 0,
-                        // transform: `translateX(${-containerWidth}px)`
+                        opacity: 0,
                       }}
                     />
                   ))}
@@ -121,6 +118,7 @@ export default function UnderstandingCardanosHydraScalingSolutionWithVisualizati
 - What makes up a hydra head pool
 - Hydra is a scaling solution, not a concurrency solution
 - Compare with vertical scaling (Solana) and sharding (Ethereum)
+- Other benefits: lower fees, faster finality, more grunular transaction amounts (in lovelace)
 - No token
 - Resources: whitepaper, code
 - Mobile styles
