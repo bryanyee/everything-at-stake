@@ -1,6 +1,7 @@
 import Emoji from 'components/Emoji';
 import ExternalLink from 'components/ExternalLink';
 import Layout from 'components/Layout';
+import HighlightBox from 'components/HighlightBox';
 
 import { UNICODE_VALUES } from 'config/constants';
 import { findPage } from 'config/pages';
@@ -20,6 +21,9 @@ const page = findPage('why-cardano');
 export default function WhyCardano() {
   return (
     <Layout date={page.date} title={page.title}>
+      <HighlightBox className="mb-3">
+        This article is still a work in progress.
+      </HighlightBox>
       <p>When asked the question, <strong><em>&quot;What makes Cardano stand out from all the other distributed ledger protocols?&quot;</em></strong>, people often refer to deep research-driven development, 100+ research papers, and formal verification that allow Cardano to have strong fundamentals. And then the puck stops there. What now?</p>
       <h4 className="my-5">Why should we care about Cardano‘s supposed &quot;strong fundamentals&quot;, when applications abound on other platforms with faster development times?</h4>
       <p>As an end user of applications, it can be hard to grasp what &quot;strong fundamentals&quot; means.</p>
