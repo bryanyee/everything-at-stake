@@ -18,20 +18,20 @@ const PAGES = [
     tags: [TAGS.journal],
   },
   {
-    date: '30 September 2021',
-    description: 'Take advantage of Daedalus to query the Cardano blockchain.',
-    enabled: true,
-    id: 'how-to-run-cardano-cli-against-daedalus-wallet',
-    title: "How to run cardano-cli against a daedalus wallet",
-    tags: [TAGS.developerHowTo],
-  },
-  {
     date: '28 October 2021',
     description: 'Cardano has zero live applications. Yet, what sets it apart from all other distributed ledger protocols?',
     enabled: true,
     id: 'why-cardano',
     title: "Why Cardano?",
     tags: [TAGS.journal],
+  },
+  {
+    date: '30 September 2021',
+    description: 'Take advantage of Daedalus to query the Cardano blockchain.',
+    enabled: false,
+    id: 'how-to-run-cardano-cli-against-daedalus-wallet',
+    title: "How to run cardano-cli against a daedalus wallet",
+    tags: [TAGS.developerHowTo],
   },
   {
     date: '29 October 2021',
@@ -47,7 +47,8 @@ const PAGES = [
     enabled: false,
     id: 'understanding-cardanos-hydra-scaling-solution-with-visualizations',
     title: "Understanding Cardano‘s Hydra scaling solution with visualizations",
-    tags: [TAGS.architecture, TAGS.visualizations],
+    tags: [],
+    // tags: [TAGS.architecture, TAGS.visualizations],
   },
   {
     date: 'Coming Soon',
@@ -55,7 +56,8 @@ const PAGES = [
     enabled: false,
     id: 'understanding-proof-of-work',
     title: "(Preview) Understanding proof of work",
-    tags: [TAGS.consensusProtocols, TAGS.visualizations],
+    tags: [],
+    // tags: [TAGS.architecture, TAGS.visualizations],
   },
 ];
 

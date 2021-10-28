@@ -1,9 +1,9 @@
 const TAGS = Object.freeze({
-  architecture: 'Architecture',
+  // architecture: 'Architecture',
   // consensusProtocols: 'Consensus Protocols',
   developerHowTo: 'Developer How-To',
   journal: 'Journal',
-  visualizations: 'Visualizations',
+  // visualizations: 'Visualizations',
 });
 
 const TAG_KEYS = Object.keys(TAGS);
