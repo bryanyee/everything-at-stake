@@ -18,7 +18,7 @@ const PAGES = [
     tags: [TAGS.journal]
   },
   {
-    date: '27 October 2021',
+    date: '28 October 2021',
     description: 'Cardano has zero live applications. Yet, what sets it apart from all other distributed ledger protocols?',
     enabled: true,
     id: 'why-cardano',
@@ -26,7 +26,7 @@ const PAGES = [
     tags: [TAGS.journal],
   },
   {
-    date: '28 October 2021',
+    date: '29 October 2021',
     description: 'Learn how to run basic cardano-cli commands using the daedalus cardano node.',
     enabled: false,
     id: 'interact-with-the-cardano-blockchain-using-the-daedalus-wallet',
