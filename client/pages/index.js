@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { useState } from 'react';
 
+import ExternalLink from 'components/ExternalLink';
 import IndexLink from 'components/IndexLink';
 import Layout from 'components/Layout';
 
@@ -9,7 +10,8 @@ import useTags from 'hooks/useTags';
 import { TAGS, TAG_KEYS } from 'config/constants';
 import { PAGES } from 'config/pages';
 
-import styles from 'styles/Tag.module.scss';
+import tagStyles from 'styles/Tag.module.scss';
+import styles from 'styles/Index.module.scss';
 
 const pages = [...PAGES];
 pages.reverse();
@@ -24,7 +26,14 @@ export default function Index() {
 
   return (
     <Layout
-      header={<h1>Everything At Stake</h1>}
+      header={
+        <h1 className="d-flex justify-content-between">
+          <span>Everything At Stake</span>
+          <ExternalLink href="https://twitter.com/StakeTheWorld">
+            <img className={styles['twitter-logo']} src="/twitter-logo.png" />
+          </ExternalLink>
+        </h1>
+      }
     >
       <p>
         <span>A technical blog about the Cardano blockchain and ecosystem.</span>
@@ -32,8 +41,8 @@ export default function Index() {
       <div className="mt-4">
         {TAG_KEYS.map((tagKey) => (
           <button
-            className={classnames('btn-sm me-2', styles.tag, styles.selectable, {
-              [styles.selected]: tagKey === selectedTag,
+            className={classnames('btn-sm me-2', tagStyles.tag, tagStyles.selectable, {
+              [tagStyles.selected]: tagKey === selectedTag,
             })}
             onClick={(e) => onTagClick(e, tagKey)}
             key={tagKey}
