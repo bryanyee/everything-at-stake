@@ -36,7 +36,7 @@ export default function Index() {
       }
     >
       <p>
-        <span>A technical blog about the Cardano blockchain and ecosystem.</span>
+        <span>A technical blog about 3rd generation blockchains and distributed ledgers.</span>
       </p>
       <div className="mt-4">
         {TAG_KEYS.map((tagKey) => (
