@@ -34,6 +34,14 @@ const PAGES = [
     tags: [TAGS.developerHowTo],
   },
   {
+    date: '7 February 2022',
+    description: 'Earn rewards and secure the network, while maintaining custody and control of your Ada.',
+    enabled: false,
+    id: 'delegated-staking-on-cardano',
+    title: "Delegated staking on Cardano is un-matched",
+    tags: [TAGS.architecture],
+  },
+  {
     date: 'Coming Soon',
     description: 'An animated visual guide to scaling transactions on Hydra head chains.',
     enabled: false,
