@@ -35,11 +35,11 @@ const PAGES = [
   },
   {
     date: '7 February 2022',
-    description: 'Earn rewards and secure the network, while maintaining custody and control of your Ada.',
+    description: 'Earn rewards and secure the network, while maintaining custody and control of your stake delegation.',
     enabled: true,
     id: 'delegated-staking-on-cardano',
-    title: "Delegated staking on Cardano is un-matched",
-    tags: [TAGS.architecture],
+    title: "Delegated staking on Cardano is an un-matched staking product",
+    tags: [TAGS.journal],
   },
   {
     date: 'Coming Soon',
